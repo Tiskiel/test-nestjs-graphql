@@ -9,7 +9,7 @@ export const databaseProvider = [
         host: 'localhost',
         port: 5432,
         username: 'postgres',
-        password: 'postgres',
+        password: process.env.DB_PASSWORD,
         database: 'recipes',
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
         synchronize: true,
